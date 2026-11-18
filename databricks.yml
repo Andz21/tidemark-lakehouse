@@ -1,8 +1,8 @@
 # This is a Declarative Automation Bundle definition for temp.
 # See https://docs.databricks.com/dev-tools/bundles/index.html for documentation.
 bundle:
-  name: tidemark-lakehouse
-  uuid: 4c73755b-55b9-4240-b772-843483f820c4
+  name: temp
+  uuid: 455ff9d8-0691-4f6b-8461-c49914c68614
 
 include:
   - resources/*.yml
@@ -34,7 +34,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/andria2191@outlook.com to make sure we only have a single copy.
       root_path: /Workspace/Users/andria2191@outlook.com/.bundle/${bundle.name}/${bundle.target}
     variables:
-      catalog: tidemark_dev
+      catalog: tidemark_prod
       schema: prod
     permissions:
       - user_name: andria2191@outlook.com
