@@ -5,6 +5,7 @@ requires-python = ">=3.10"
 
 [tool.ruff]
 line-length = 100
+builtins = ["spark", "dbutils", "display", "displayHTML"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
